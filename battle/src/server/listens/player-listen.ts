@@ -102,6 +102,19 @@ class PlayerListen{
             playerEmit.AnotherRotated_BroadCast_Emit(socket,playerData);
         })
     }
+    YouMoveRotate_Listen = (socket) =>{
+        socket.on(ListenConst.YOU_MOVE_ROTATE,(data)=>{
+            loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.PLAYER_MOVE_ROTATE,data);
+            var playerData: PlayerData = {
+                playerName: data.playerName,
+                playerSpawnPosition: data.playerSpawnPosition,
+                playerSpawnRotation: data.playerSpawnRotation,
+                roomID: data.roomID,
+                playerHP: data.playerHP
+            }
+            playerEmit.AnotherMoveRotated_BroadCast_Emit(socket,playerData);
+        })
+    }
 
     YouSpawnEnemy_Listen = (socket) => {
         socket.on(ListenConst.YOU_SPAWN_ENEMY,(data)=>{

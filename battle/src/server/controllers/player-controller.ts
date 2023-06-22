@@ -20,6 +20,9 @@ class PlayerController{
     YouRotate_Listen_Controller(){
         playerListen.YouRotate_Listen(this.socket);
     }
+    YouMoveAndRotate_Listen_Controller(){
+        playerListen.YouMoveRotate_Listen(this.socket);
+    }
     
     YouSpawnEnemy_Listen_Controller(){
         playerListen.YouSpawnEnemy_Listen(this.socket);

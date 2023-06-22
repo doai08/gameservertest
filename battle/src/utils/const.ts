@@ -12,6 +12,8 @@ class EmitBroadConst{
     public static ANOTHER_PLAYER_CONNECTED: string              = "ANOTHER_PLAYER_CONNECTED";
     public static ANOTHER_PLAYER_MOVED: string                  = "ANOTHER_PLAYER_MOVED";
     public static ANOTHER_PLAYER_ROTATED: string                = "ANOTHER_PLAYER_ROTATED";
+    public static ANOTHER_PLAYER_MOVE_ROTATED: string           = "ANOTHER_PLAYER_MOVE_ROTATED";
+
     public static ANOTHER_PLAYER_SPAWNED_ENEMY: string          = "ANOTHER_PLAYER_SPAWNED_ENEMY";
     public static ANOTHER_PLAYER_SPAWNED_GEM: string            = "ANOTHER_PLAYER_SPAWNED_GEM";
     public static ANOTHER_PLAYER_SPAWNED_TOWER: string          = "ANOTHER_PLAYER_SPAWNED_TOWER";
@@ -36,6 +38,7 @@ class ListenConst{
     public static YOU_ENTER_BATTLE: string                      = "YOU_ENTER_BATTLE";
     public static YOU_MOVE: string                              = "YOU_MOVE";
     public static YOU_ROTATE: string                            = "YOU_ROTATE";
+    public static YOU_MOVE_ROTATE: string                       = "YOU_MOVE_ROTATE";
     public static YOU_REQUEST_RESPAWN_ENEMY: string             = "YOU_REQUEST_RESPAWN_ENEMY";
     public static YOU_SPAWN_ENEMY: string                       = "YOU_SPAWN_ENEMY";
     public static YOU_SPAWN_GEM: string                         = "YOU_SPAWN_GEM";
@@ -63,13 +66,14 @@ class ColorLoggerConst{
 }
 
 class MessageConst{
-    public static SERVER_PLAYER: string            = "SERVER_PLAYER";
+    public static SERVER_PLAYER: string             = "SERVER_PLAYER";
 
     public static PLAYER_CONNECT: string            = "PLAYER_CONNECT";
     public static PLAYER_ENTER_BATTLE: string       = "PLAYER_ENTER_BATTLE";
 
     public static PLAYER_MOVE: string               = "PLAYER_MOVE";
     public static PLAYER_ROTATE: string             = "PLAYER_ROTATE";
+    public static PLAYER_MOVE_ROTATE: string        = "PLAYER_MOVE_ROTATE";
 
     public static MONSTER_MOVE_AND_ROTATE: string   = "MONSTER_MOVE_AND_ROTATE";
     public static MONSTER_DIE: string               = "MONSTER_DIE";

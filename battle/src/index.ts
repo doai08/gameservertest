@@ -62,8 +62,8 @@ class GameServer{
             playerController.socket = socket;
             playerController.YouConnect_Listen_Controller();
             playerController.YouEnterBattle_Listen_Controller();
-            playerController.YouMove_Listen_Controller();
-            playerController.YouRotate_Listen_Controller();
+            //playerController.YouMove_Listen_Controller();
+            //playerController.YouRotate_Listen_Controller();
             playerController.YouSpawnEnemy_Listen_Controller();
             //playerController.YouSpawnGem_Listen_Controller();
             playerController.YouSpawnTower_Listen_Controller();
@@ -74,7 +74,7 @@ class GameServer{
             enemyController.socket = socket;       
             enemyController.EnemyDie_Listen_Controller();
             enemyController.TowerDestroy_Listen_Controller();
-
+            playerController.YouMoveAndRotate_Listen_Controller(); 
             //OFFLOAD FOR SERVER:
             //playerController.YouSpawnBullet_Listen_Controller(); //x
             //playerController.YouRotateCursorTower_Controller(); //x

@@ -118,7 +118,7 @@ class PlayerListen{
 
     YouSpawnEnemy_Listen = (socket) => {
         socket.on(ListenConst.YOU_SPAWN_ENEMY,(data)=>{
-            //loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.MONSTER_SPAWN,data);
+            loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.MONSTER_SPAWN,data);
             var enemyData: EnemyData = {
                 enemyID: data.enemyID,
                 enemyName: data.enemyName,

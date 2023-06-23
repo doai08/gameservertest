@@ -1,6 +1,7 @@
 import PositionData from './position-model';
 import RotationData from './rotation-model';
 class ItemInMapData{
+    public itemInMapID: number;
     public itemInMapName: string;
     public itemInMapSpawnPosition: PositionData;
     public itemInMapSpawnRotation: RotationData;
@@ -8,7 +9,8 @@ class ItemInMapData{
     public timeExistence: number;
     public amountEffect: number;
     public roomID: number;
-    constructor( _itemInMapName:string,_itemInMapSpawnPosition:PositionData,_itemInMapSpawnRotation: RotationData,_itemInMapRange:number,_timeExistence: number, _amountEffect: number, _roomID:number){
+    constructor( _itemInMapID: number, _itemInMapName:string,_itemInMapSpawnPosition:PositionData,_itemInMapSpawnRotation: RotationData,_itemInMapRange:number,_timeExistence: number, _amountEffect: number, _roomID:number){
+        this.itemInMapID = _itemInMapID;
         this.itemInMapName = _itemInMapName;
         this.itemInMapSpawnPosition = _itemInMapSpawnPosition;
         this.itemInMapSpawnRotation = _itemInMapSpawnRotation;

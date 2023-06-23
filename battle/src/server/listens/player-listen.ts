@@ -223,6 +223,7 @@ class PlayerListen{
         socket.on(ListenConst.YOU_SPAWN_ITEM_MAP,(data)=>{
             loggerUtil.LoggerDetail(ColorLoggerConst.CYAN,MessageConst.ITEM_MAP_SPAWN,data);
             var itemMapData: ItemInMapData = {
+                itemInMapID: data.itemInMapID,
                 itemInMapName: data.itemInMapName,
                 itemInMapSpawnPosition: data.itemInMapSpawnPosition,
                 itemInMapSpawnRotation: data.itemInMapSpawnRotation,

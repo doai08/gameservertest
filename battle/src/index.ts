@@ -62,10 +62,10 @@ class GameServer{
             playerController.socket = socket;
             playerController.YouConnect_Listen_Controller();
             playerController.YouEnterBattle_Listen_Controller();
-            playerController.YouMove_Listen_Controller();
+            //playerController.YouMove_Listen_Controller();
             //playerController.YouRotate_Listen_Controller();
             playerController.YouSpawnEnemy_Listen_Controller();
-            //playerController.YouSpawnGem_Listen_Controller();
+            playerController.YouSpawnGem_Listen_Controller();
             playerController.YouSpawnTower_Listen_Controller();
             playerController.YouSpawnBoss_Listen_Controller();
             playerController.YouSpawnSkill_Listen_Controller();    

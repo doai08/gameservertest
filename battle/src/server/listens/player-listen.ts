@@ -104,7 +104,7 @@ class PlayerListen{
     }
     YouMoveRotate_Listen = (socket) =>{
         socket.on(ListenConst.YOU_MOVE_ROTATE,(data)=>{
-            loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.PLAYER_MOVE_ROTATE,data);
+            //loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.PLAYER_MOVE_ROTATE,data);
             var playerData: PlayerData = {
                 playerName: data.playerName,
                 playerSpawnPosition: data.playerSpawnPosition,
@@ -118,7 +118,7 @@ class PlayerListen{
 
     YouSpawnEnemy_Listen = (socket) => {
         socket.on(ListenConst.YOU_SPAWN_ENEMY,(data)=>{
-            loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.MONSTER_SPAWN,data);
+            //loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.MONSTER_SPAWN,data);
             var enemyData: EnemyData = {
                 enemyID: data.enemyID,
                 enemyName: data.enemyName,
@@ -133,7 +133,7 @@ class PlayerListen{
     }
     YouSpawnGem_Listen = (socket) => {
         socket.on(ListenConst.YOU_SPAWN_GEM,(data)=>{
-            loggerUtil.LoggerDetail(ColorLoggerConst.YELLOW,MessageConst.GEM_SPAWN,data);
+            //loggerUtil.LoggerDetail(ColorLoggerConst.YELLOW,MessageConst.GEM_SPAWN,data);
             var gemData: GemData = {
                 gemName: data.gemName,
                 gemSpawnPosition: data.gemSpawnPosition,

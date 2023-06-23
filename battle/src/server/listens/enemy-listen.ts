@@ -50,7 +50,7 @@ class EnemyListen{
     }
     TowerDestroy_Listen = (socket) =>{
         socket.on(ListenConst.TOWER_DESTROY,(data)=>{
-            loggerUtil.LoggerDetail(ColorLoggerConst.RED,MessageConst.TOWER_DESTROY, data);
+            //loggerUtil.LoggerDetail(ColorLoggerConst.RED,MessageConst.TOWER_DESTROY, data);
             var towerData: TowerData = {
                 towerID: data.towerID,
                 towerName: data.towerName,

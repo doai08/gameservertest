@@ -18,6 +18,9 @@ class EnemyController{
     TowerDestroy_Listen_Controller(){
         enemyListen.TowerDestroy_Listen(this.socket);
     }
+    ItemInMapDestroy_Listen_Controller(){
+        enemyListen.ItemInMapDestroy_Listen(this.socket);
+    }
 }
 
 export default new EnemyController;

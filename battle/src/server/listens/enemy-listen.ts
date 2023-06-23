@@ -4,6 +4,7 @@ import EnemyData                                            from '../models/enem
 import GunTowerData                                         from '../models/gun-tower-model';
 import enemyEmit                                            from '../emits/enemy-emit';
 import TowerData from 'server/models/tower-model';
+import ItemInMapData from 'server/models/item-in-map-model';
 class EnemyListen{ 
     EnemyMoveAndRotate_Listen = (socket) =>{
         socket.on(ListenConst.ENEMY_MOVE_AND_ROTATE,(data)=>{
@@ -59,6 +60,22 @@ class EnemyListen{
                 roomID: data.roomID
             }
             enemyEmit.TowerDestroy_BroadCast_Emit(socket,towerData);
+        })
+    }
+    ItemInMapDestroy_Listen = (socket) =>{
+        socket.on(ListenConst.ITEM_IN_MAP_DESTROY,(data)=>{
+            loggerUtil.LoggerDetail(ColorLoggerConst.RED,MessageConst.ITEM_IN_MAP_DESTROY, data);
+            var itemInMapData: ItemInMapData = {
+                itemInMapID: data.itemInMapID,
+                itemInMapName: data.itemInMapName,
+                itemInMapSpawnPosition: data.itemInMapSpawnPosition,
+                itemInMapSpawnRotation: data.itemInMapSpawnRotation,
+                itemInMapRange: data.itemInMapRange,
+                timeExistence: data.timeExistence,
+                amountEffect: data.amountEffect,
+                roomID: data.roomID,
+            }
+            enemyEmit.ItemInMapDestroy_BroadCast_Emit(socket,itemInMapData);
         })
     }
 

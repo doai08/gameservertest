@@ -74,6 +74,7 @@ class GameServer{
             enemyController.socket = socket;       
             enemyController.EnemyDie_Listen_Controller();
             enemyController.TowerDestroy_Listen_Controller();
+            enemyController.ItemInMapDestroy_Listen_Controller();
             playerController.YouMoveAndRotate_Listen_Controller(); 
             //OFFLOAD FOR SERVER:
             //playerController.YouSpawnBullet_Listen_Controller(); //x

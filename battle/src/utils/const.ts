@@ -28,6 +28,7 @@ class EmitBroadConst{
     public static ENEMY_DIED: string                            = "ENEMY_DIED";
     public static GUN_TOWER_ROTATED: string                     = "GUN_TOWER_ROTATED";
     public static TOWER_DESTROYED: string                       = "TOWER_DESTROYED";
+    public static ITEM_IN_MAP_DESTROYED: string                 = "ITEM_IN_MAP_DESTROYED";
 
     public static ANOTHER_PLAYER_UPDATED_HP: string             = "ANOTHER_PLAYER_UPDATED_HP";
 }
@@ -54,6 +55,7 @@ class ListenConst{
     public static ENEMY_DIE: string                             = "ENEMY_DIE";
     public static GUN_TOWER_ROTATE: string                      = "GUN_TOWER_ROTATE";
     public static TOWER_DESTROY: string                         = "TOWER_DESTROY";
+    public static ITEM_IN_MAP_DESTROY: string                   = "ITEM_IN_MAP_DESTROY";
     
 }
 class ColorLoggerConst{
@@ -92,6 +94,7 @@ class MessageConst{
 
     public static GUN_TOWER_ROTATE: string          = "GUN_TOWER_ROTATE";
     public static TOWER_DESTROY: string             = "TOWER_DESTROY";
+    public static ITEM_IN_MAP_DESTROY: string       = "ITEM_IN_MAP_DESTROY";
 }
 
 export {

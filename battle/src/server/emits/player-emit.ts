@@ -35,6 +35,8 @@ class PlayerEmit{
     }
     public AnotherMoveRotated_BroadCast_Emit = (socket,playerData:PlayerData) =>{
         socket.to(playerData.roomID).emit(EmitBroadConst.ANOTHER_PLAYER_MOVE_ROTATED,playerData);
+        const now = new Date();
+        console.log("Server gửi đi:" + now.getMinutes() +";"+ now.getSeconds() +";" +now.getMilliseconds());
     }
     public YouRequestedSpawnEnemy_Emit = (socket,playerData: PlayerData) =>{
         socket.emit(EmitConst.YOU_REQUESTED_SPAWN_ENEMY,playerData);

@@ -106,7 +106,7 @@ class PlayerListen{
         socket.on(ListenConst.YOU_MOVE_ROTATE,(data)=>{
             const now = new Date();
             
-            console.log("Time" + now.getMinutes() + now.getSeconds() +";" +now.getMilliseconds());
+            console.log("Server Nhận:" + now.getMinutes() +";"+ now.getSeconds() +";" +now.getMilliseconds());
             //loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.PLAYER_MOVE_ROTATE,data);
             var playerData: PlayerData = {
                 playerName: data.playerName,

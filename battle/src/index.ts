@@ -23,25 +23,9 @@ class GameServer{
         this._httpServer = http.createServer().listen(this._PORT,()=>{
             console.log(`server is listening at port ${(this._PORT)}`);
         });
-        this._io = new SocketIO(this._httpServer,{ transports: ['websocket', 'polling'] });
-
+        this._io = new SocketIO(this._httpServer);
         this.SocketConnect();
- 
-        // this.ConnectDB();
     }
-    // private ConnectDB(){
-    //     this.Mysql_SequelizeConnectDB() //kết nối đến database (mysql)
-    //     // mongoConn.Connect();//Kết nối đến Database (MongoDB)    
-    // }
-
-    // private Mysql_SequelizeConnectDB(){
-    //     sequelizeConnection.authenticate().then(() => {
-    //         console.log('Connection has been established successfully.');
-    //     }).catch((error) => {
-    //         console.error('Unable to connect to the database: ', error);
-    //     });
-    // }
-
     //CONNECTION - SERVER HANDLING
     private SocketConnect = () =>{  //Mở kết nối socketio
         
@@ -51,8 +35,8 @@ class GameServer{
             playerController.socket = socket;
             playerController.YouConnect_Listen_Controller();
             playerController.YouEnterBattle_Listen_Controller();
-            //playerController.YouMove_Listen_Controller();
-            //playerController.YouRotate_Listen_Controller();
+            playerController.YouMove_Listen_Controller();
+            playerController.YouRotate_Listen_Controller();
             playerController.YouSpawnEnemy_Listen_Controller();
             playerController.YouSpawnGem_Listen_Controller();
             playerController.YouSpawnTower_Listen_Controller();
@@ -72,14 +56,6 @@ class GameServer{
             //playerController.YouUpdateHP_Listen_Controller(); //x
             //enemyController.EnemyMoveAndRotate_Listen_Controller(); //x
             //enemyController.GunTower_Rotate_Listen_Controller(); //x
-
-            //== DATA_BASE_CONTROLLER
-            //Mongodb
-            // battleDatabaseController.socket = socket;
-            //battleMongoDatabaseController.DataBase_AddBattleReport_Listen_Controller();
-            //Mysql
-            // battleMysqlDatabaseController.socket = socket;
-            // battleMysqlDatabaseController.DataBase_AddBattleReport_Listen_Controller();
         })    
     }
 }

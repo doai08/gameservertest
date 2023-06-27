@@ -23,7 +23,8 @@ class GameServer{
         this._PORT = Number(process.env.PORT);
         this._app = Express();
         this._httpServer = http.createServer(this._app);
-        this._io = new SocketIO(this._httpServer);
+        this._io = new SocketIO(this._httpServer,{ rememberTransport: false, transports: ['WebSocket', 'Flash Socket', 'AJAX long-polling'] });
+
         this.SocketConnect();
         this.Config(this._app);
         this.ServerListening(this._PORT);   

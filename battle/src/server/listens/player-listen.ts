@@ -104,7 +104,7 @@ class PlayerListen{
     }
     YouMoveRotate_Listen = (socket) =>{
         socket.on(ListenConst.YOU_MOVE_ROTATE,(data)=>{
-            //loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.PLAYER_MOVE_ROTATE,data);
+            loggerUtil.LoggerDetail(ColorLoggerConst.GREEN,MessageConst.PLAYER_MOVE_ROTATE,data);
             var playerData: PlayerData = {
                 playerName: data.playerName,
                 playerSpawnPosition: data.playerSpawnPosition,

@@ -14,32 +14,20 @@ import {ListenConst}    from './utils/const';
 
 class GameServer{
     private _PORT : number;
-    private _app: Express.Application;
     private _httpServer :http.Server;
     private _io: SocketIO;
 
     constructor(){
         dotenv.config();
         this._PORT = Number(process.env.PORT);
-        this._app = Express();
-        this._httpServer = http.createServer(this._app);
+        this._httpServer = http.createServer().listen(this._PORT,()=>{
+            console.log(`server is listening at port ${(this._PORT)}`);
+        });
         this._io = new SocketIO(this._httpServer,{ transports: ['websocket', 'polling'] });
 
         this.SocketConnect();
-        this.Config(this._app);
-        this.ServerListening(this._PORT);   
+ 
         // this.ConnectDB();
-    }
-
-    private Config = (app:Express.Application): void => {  //Cấu hình cho app đọc json body
-        app.use(BodyParser.urlencoded({extended:false}));
-        app.use(BodyParser.json());
-        app.use(Express.json());
-    }
-    private ServerListening = (port) =>{ //Server lắng nghe ở cổng
-        this._httpServer.listen(port,()=>{
-            console.log(`server is listening at port ${(port)}`);
-        })
     }
     // private ConnectDB(){
     //     this.Mysql_SequelizeConnectDB() //kết nối đến database (mysql)

@@ -21,6 +21,8 @@ class PlayerController{
         playerListen.YouRotate_Listen(this.socket);
     }
     YouMoveAndRotate_Listen_Controller(){
+        const now = new Date();
+        console.log("Server trước khi Nhận:" + now.getMinutes() +";"+ now.getSeconds() +";" +now.getMilliseconds());
         playerListen.YouMoveRotate_Listen(this.socket);
     }
     
